@@ -1,0 +1,34 @@
+.editor-box .editor,.editor-box .preview
+{
+    padding:20px;
+}
+.editor-box .editor
+{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-right: 1px dashed #eee;
+}
+
+.editor-box .preview
+{
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    border-right:1px dashed #eee;
+    font-size: 14px;
+    padding:10px;
+    overflow-y: scroll;
+}
+.editor-box
+{
+    clear:both;
+    position: absolute;
+    top:0px;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
