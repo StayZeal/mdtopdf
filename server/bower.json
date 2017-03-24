@@ -1,0 +1,17 @@
+{
+  "name": "mdtopdf server",
+  "main": "server.js",
+  "homepage": "https://github.com/StayZeal/mdtopdf",
+  "authors": [
+    ""
+  ],
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
