@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mdpdf</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/yue.css"/>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="js/wizMarkdown.js"></script>
+
+    <script src="../bower_components/file-saver/FileSaver.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+<div ng-app="mdtopdf" ng-controller="formController">
+
+    <form novalidate>
+        <div class="editor-box">
+
+            <input type="submit" class="btn btn-default" value="madepdf" ng-click="processForm()"/>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <textarea class="editor" ng-model="resume" id="edit_area"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <div class="preview yue" id="editor-preview" ng-bind-html="resume | wizMarkdownFltr">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var h = $(window).height() - 100 + 'px';
+        $('#edit_area').css('height', h);
+        $('#editor-preview').css('height', h);
+        console.log(h);
+    });
+</script>
+</html>
