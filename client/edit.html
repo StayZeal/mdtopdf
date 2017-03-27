@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mdpdf</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/yue.css"/>
+    <!-- Theme CSS -->
+    <!--  <link href="css/freelancer.min.css" rel="stylesheet">-->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="js/wizMarkdown.js"></script>
+
+    <script src="../bower_components/file-saver/FileSaver.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+<div ng-app="mdtopdf" ng-controller="formController">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Markdown To PDF</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <div class="col-lg-8 col-lg-offset-2 text-center">
+                            <a  class="btn btn-outline" ng-click="processForm()">生成PDF</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div class="row">
+             <input type="submit" class="btn btn-info btn-lg  center-block " value="生成PDF" ng-click="processForm()"/>
+     </div>-->
+    <div class="row">
+
+        <div class="col-md-6">
+                     <textarea class=" form-control" ng-model="resume" id="edit_area"
+                               placeholder="使用MarkDown语法在这里进行编辑"></textarea>
+        </div>
+        <div class="col-md-6">
+            <div class="preview yue" id="editor-preview" ng-bind-html="resume | wizMarkdownFltr">
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var h = $(window).height() + 'px';
+        $('#edit_area').css('height', h);
+        $('#editor-preview').css('height', h);
+        console.log(h);
+    });
+</script>
+</html>

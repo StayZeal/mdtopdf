@@ -13,23 +13,26 @@ app.controller("formController", function ($scope, $http) {
 
     $scope.processForm = function () {
         // $scope.resume = {};
-        console.log($scope.resume);
+        // console.log($scope.resume);
         console.log("execute.......");
+
+        if ($scope.resume == null) {
+            return;
+        }
+
         $http({
             method: "post",
             url: "http://localhost:8081/makepdf",
             data: {content: $scope.resume},
-            responseType:"arraybuffer"
+            responseType: "arraybuffer"
 
         }).then(function successCallback(response, status, header, config) {
-                 //也可以成功下载pdf
+                //也可以成功下载pdf
                 // var blob = new Blob([response.data], {type: "application/pdf;charset=utf-8"});
                 var blob = new Blob([response.data], {type: "text/plain;charset=utf-8"});
-                saveAs(blob, "lll.pdf");
-                // $scope.downloadLink = data;
-                // console.log(response.data);
+                saveAs(blob, "markdown.pdf");
             }, function errorCallback(response) {
-                console.log(response)
+                console.error(response)
             }
         );
 
@@ -37,7 +40,6 @@ app.controller("formController", function ($scope, $http) {
 });
 
 app.controller("resumeCtrl", function ($scope, $http) {
-    // $scope.resume = "你是不是饿得慌"
     $http({
         method: "post",
         url: "http://localhost:8081/",
