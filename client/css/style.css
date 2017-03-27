@@ -1,34 +1,68 @@
-.editor-box .editor,.editor-box .preview
-{
-    padding:20px;
+.editor-box .editor, .editor-box .preview {
+    padding: 20px;
 }
-.editor-box .editor
-{
+
+.editor-box .editor {
     width: 100%;
     height: 100%;
     border: 0px;
     border-right: 1px dashed #eee;
 }
 
-.editor-box .preview
-{
+.editor-box .preview {
     border: 0px;
     width: 100%;
     height: 100%;
-    border-right:1px dashed #eee;
+    border-right: 1px dashed #eee;
     font-size: 14px;
-    padding:10px;
+    padding: 10px;
     overflow-y: scroll;
 }
-.editor-box
-{
-    clear:both;
+
+.editor-box {
+    clear: both;
     position: absolute;
-    top:0px;
-    height:100%;
-    width:100%;
+    top: 0px;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
 }
+
+.md-btn {
+    margin: 10px;
+}
+
+.md-editor-box {
+    width: 100%;
+}
+
+.navbar-custom {
+    background: #2C3E50;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none
+}
+.navbar-custom .navbar-brand, .navbar-custom .navbar-brand.active, .navbar-custom .navbar-brand:active, .navbar-custom .navbar-brand:focus, .navbar-custom .navbar-brand:hover {
+    color: #fff
+}
+.navbar-custom .navbar-nav li a {
+    color: #fff
+}
+
+body {
+    padding-top: 60px;
+}
+.btn-outline {
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+    margin: 5px
+}
+
+
 
