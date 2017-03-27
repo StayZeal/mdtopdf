@@ -14,7 +14,13 @@ app.use(bodyParser.urlencoded({extended: true})); // support encoded bodies
 
 app.get('/', function (req, res) {
     // res.sendFile(__dirname + "/../index.html")
+
     res.sendFile(path.resolve( "../client/index.html"));
+});
+
+app.get('/edit',function (req,res) {
+
+    res.sendFile(path.resolve( "../client/edit.html"))
 });
 
 app.post("/makepdf", function (req, res) {
@@ -32,5 +38,6 @@ var server = app.listen(8081, function () {
     // var port = server.address().port;
     //
     // console.log("应用实例，访问地址为 http://%s:%s", host, port)
+    console.log("应用实例，访问地址为 http://localhost:8081/");
 
 })
