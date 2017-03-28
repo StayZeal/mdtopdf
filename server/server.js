@@ -25,7 +25,7 @@ app.get('/edit',function (req,res) {
 
 app.post("/makepdf", function (req, res) {
     var s = new readable();
-    // console.log("makepdf execute:" + req.body.content);
+    console.log("makepdf execute:" + req.body.content);
 
     s.push(req.body.content);
     s.push(null);
