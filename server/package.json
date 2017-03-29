@@ -1,0 +1,22 @@
+{
+  "name": "markdowntopdf",
+  "version": "1.0.0",
+  "description": "markdown to pdf",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "markdown-pdf": "^7.0.0",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "markdown",
+    "pdf"
+  ],
+  "author": "Ado",
+  "license": "MIT"
+}
