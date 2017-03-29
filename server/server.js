@@ -29,6 +29,7 @@ app.post("/makepdf", function (req, res) {
 
     s.push(req.body.content);
     s.push(null);
+
     s.pipe(markdownpdf()).pipe(res);
 });
 
