@@ -22,7 +22,7 @@ app.controller("formController", function ($scope, $http) {
 
         $http({
             method: "post",
-            url: "http://localhost:8081/makepdf",
+            url: "/makepdf",
             data: {content: $scope.resume},
             responseType: "arraybuffer"
 
