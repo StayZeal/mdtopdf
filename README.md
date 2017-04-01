@@ -1,9 +1,17 @@
 # mdtopdf
 
-Markdown文本生成PDF文档，支持中文
+Markdown文本生成PDF文档，支持中文.
 
-markdown to pdf(client-and-server)
+markdown to pdf.
+
+client:AngularJs.
+
+server:Express
 
 Website http://mdpdf.com
 
 Develop with Express(Node.js) and Angular js 1
+
+环境：安装node.js
+使用方法：
+进入server目录执行`node server.js`命令，在浏览器中访问http://localhost
