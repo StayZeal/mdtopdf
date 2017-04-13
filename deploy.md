@@ -18,6 +18,7 @@ Error: Command failed: /root/node_ws/mdtopdf/server/node_modules/markdown-pdf/no
 
 ```
 执行`sudo apt-get install libfontconfig`
+
 2、
 ```
 
