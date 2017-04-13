@@ -24,4 +24,4 @@ TUDO:
 
 3、Markdown模板
 
-部署问题：[deploy]
+[部署问题](deploy.md)
