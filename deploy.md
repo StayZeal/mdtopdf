@@ -16,6 +16,6 @@ Error: spawn /root/node_ws/mdtopdf/server/node_modules/markdown-pdf/node_modules
 
 ```
 
-解决方法：删除server/node_modules/mdpdf/node_modules文件夹，然后在mdpdf文件夹执行`npm install` 命令
+解决方法：删除server/node_modules/markdown-pdf/node_modules文件夹，然后在markdown-pdf文件夹执行`npm install` 命令
 
 
